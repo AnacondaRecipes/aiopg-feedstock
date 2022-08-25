@@ -16,18 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - psycopg2 >=2.7.0
+    - async-timeout >=3.0,<5.0
 
 test:
   requires:
     - sqlalchemy
   imports:
-    #- aiopg
-    #- aiopg.sa
+    - aiopg
+    - aiopg.sa
 
 about:
   home: https://aiopg.readthedocs.io
