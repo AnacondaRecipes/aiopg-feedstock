@@ -18,10 +18,11 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=3.6
-    - psycopg2 >=2.7.0 # [not win]
-    - psycopg2-binary >=2.7.0 # [win]
+    - psycopg2 >=2.8.4
     - async-timeout >=3.0,<5.0
 
 test:
