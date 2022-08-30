@@ -30,6 +30,8 @@ test:
   imports:
     - aiopg
     - aiopg.sa
+  command:
+    pip check
 
 about:
   home: https://aiopg.readthedocs.io
