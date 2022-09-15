@@ -13,25 +13,27 @@ build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<36]
+
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - setuptools
     - wheel
   run:
-    - python >=3.6
+    - python
     - psycopg2 >=2.8.4
     - async-timeout >=3.0,<5.0
 
 test:
   requires:
     - sqlalchemy
+    - pip
   imports:
     - aiopg
     - aiopg.sa
   command:
-    pip check
+    - pip check
 
 about:
   home: https://aiopg.readthedocs.io
@@ -40,3 +42,4 @@ about:
   license_file: LICENSE
   summary: "Postgres integration with asyncio."
   dev_url: https://github.com/aio-libs/aiopg
+  doc_url: https://aiopg.readthedocs.io/en/stable/
